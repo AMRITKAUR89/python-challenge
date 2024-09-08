@@ -14,7 +14,6 @@ This Python script is designed to analyze financial data from a CSV file and gen
 - The script uses the os and csv modules. os is used for file path operations and creating directories, and csv is used for reading the CSV data.
 2. Setting Up Paths:
 - The base directory for the input file and the output directory are specified using absolute paths.
-- The script ensures that the output directory exists by using os.makedirs() with exist_ok=True.
 3. Reading the CSV File:
 - The script opens the budget_data.csv file and reads its contents.
 - It skips the header row using next(csv_data).
@@ -28,7 +27,7 @@ This Python script is designed to analyze financial data from a CSV file and gen
 5. Calculating Averages:
 - After processing all rows, the script calculates the average change in profit/loss across the months.
 6. Generating the Output:
-- The results are formatted into a report string that is printed to the console and saved to financial_analysis.txt in the Analysis directory.
+- The results are formatted into a report that is printed to the console and saved to financial_analysis.txt in the Analysis directory.
 ## Usage
 1. Run the Script:
 - Execute the script using Python in git bash: <pre>
