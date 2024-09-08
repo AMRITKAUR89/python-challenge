@@ -4,37 +4,37 @@ This Python script is designed to analyze election data from a CSV file and gene
 
 ## File Structure
 - Script Directory:
- - The script is designed to be run in the context of the PyPoll challenge within a Python learning project.
+  - The script is designed to be run in the context of the PyPoll challenge within a Python learning project.
 - Directories:
- - Resources: Contains the input data file election_data.csv.
- - Analysis: Stores the output analysis report as Election_results.txt.
+  - Resources: Contains the input data file election_data.csv.
+  - Analysis: Stores the output analysis report as Election_results.txt.
 ## Script Explanation
 1. Importing Modules:
-- The script uses the os and csv modules. os is used for file path operations, and csv is used for reading the CSV data.
+  - The script uses the os and csv modules. os is used for file path operations, and csv is used for reading the CSV data.
 2. Setting Up Paths:
-- The base directory for the input file and the output directory are specified using absolute paths.
+  - The base directory for the input file and the output directory are specified using file paths.
 The output file is specified as Election_results.txt within the Analysis directory.
 3. Initializing Variables:
-- TotalVotes = 0: Tracks the total number of votes cast.
-- candidateVotes = {}: A dictionary to store the number of votes each candidate received.
+  - TotalVotes = 0: Tracks the total number of votes cast.
+  - candidateVotes = {}: A dictionary to store the number of votes each candidate received.
 4. Reading the CSV File:
-- The script opens the election_data.csv file and reads its contents.
-- It skips the header row using next(poll_data).
+  - The script opens the election_data.csv file and reads its contents.
+  - It skips the header row using next(poll_data).
 5. Processing Data:
-- The script loops through each row to:
- - Increment TotalVotes for each vote.
- - Extract the candidate's name and update their vote count in candidateVotes.
+  - The script loops through each row to:
+  - Increment TotalVotes for each vote.
+  - Extract the candidate's name and update their vote count in candidateVotes.
 6. Determining the Winner:
-- The script identifies the candidate with the most votes using max(candidateVotes, key=candidateVotes.get).
+  - The script identifies the candidate with the most votes using max(candidateVotes, key=candidateVotes.get).
 7. Generating and Printing the Output:
-- The election results, including the total votes, each candidate's vote percentage, and total votes, are printed to the console.
-- The winner of the election is also printed.
+  - The election results, including the total votes, each candidate's vote percentage, and total votes, are printed to the console.
+  - The winner of the election is also printed.
 8. Saving the Results to a Text File:
-- The script writes the results to Election_results.txt in the Analysis directory, following the same format as the console output.
+  - The script writes the results to Election_results.txt in the Analysis directory, following the same format as the console output.
 ## Usage
 1. When we run the Script:
 - Execute the script using Python:<pre>
-python election_analysis.py</pre>
+python main.py</pre>
 - Ensure that the input file election_data.csv is in the Resources directory before running the script.
 2. View the Results:
 - After execution, the results will be printed to the console.
