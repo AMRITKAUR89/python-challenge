@@ -31,7 +31,7 @@ This Python script is designed to analyze financial data from a CSV file and gen
 ## Usage
 1. Run the Script:
 - Execute the script using Python in git bash: <pre>
-python financial_analysis.py</pre> 
+python main.py</pre> 
 - Ensure that the input file budget_data.csv is in the Resources directory before running the script.
 2. View the Results:
 - After execution, the results will be printed to the console.
