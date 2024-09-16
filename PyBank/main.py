@@ -1,14 +1,7 @@
 import os
 import csv
 
-base_dir = r"C:\Users\amrit\LearnPython\assignment1\python-challenge\PyBank\Resources"
-file_name = "budget_data.csv"
-
-output_dir = r"C:\Users\amrit\LearnPython\assignment1\python-challenge\PyBank\Analysis"
-os.makedirs(output_dir, exist_ok=True)
-
-
-budget_data = os.path.join(base_dir, file_name)
+budget_data = os.path.join('.','Resources','budget_data.csv')
 
 with open(budget_data, 'r') as csv_file:
     csv_data = csv.reader(csv_file, delimiter=",")
@@ -58,7 +51,7 @@ with open(budget_data, 'r') as csv_file:
     )
     
     print(output)
-    output_file = os.path.join(output_dir, "financial_analysis.txt")
+    output_file =os.path.join('.','Resources','financial_analysis.txt')
     with open(output_file, 'w') as txt_file:
         txt_file.write(output)
         
