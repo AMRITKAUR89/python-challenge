@@ -2,8 +2,8 @@ import os
 import csv
 
 # File paths
-election_data = os.path.join(r"C:\Users\amrit\LearnPython\assignment1\python-challenge\PyPoll\Resources\election_data.csv")
-output_file = os.path.join(r"C:\Users\amrit\LearnPython\assignment1\python-challenge\PyPoll\Analysis", "election_results.txt")
+election_data = os.path.join('.','Resources','election_data.csv')
+output_file = os.path.join('.','Resources', 'Election_results.txt')
 
 # Initialize variables
 TotalVotes = 0
@@ -39,7 +39,7 @@ for candi, votes in candidateVotes.items():
     print(f"{candi}: {percentage:.3f}% ({votes})")
 print("-------------------------")
 print(f"Winner: {winner}")
-print("-------------------------")
+print("-----------------------")
 
 # Save the results to a text file
 with open(output_file, 'w') as txt_file:
@@ -53,3 +53,6 @@ with open(output_file, 'w') as txt_file:
     txt_file.write("-------------------------\n")
     txt_file.write(f"Winner: {winner}\n")
     txt_file.write("-------------------------\n")
+
+
+
